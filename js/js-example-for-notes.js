@@ -6,4 +6,3 @@ alert("Hello from JavaScript");
 // we can concantenate inside of an alert //
 alert("Hello from " + myName)
 
-// confirmed
