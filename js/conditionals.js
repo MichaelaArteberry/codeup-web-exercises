@@ -23,9 +23,9 @@
  */
 
 //function analyzeColor(color){
- //   if(typeof color === 'blue'){
+ //   if(color === 'blue'){
    //     return "Blue is the color of the Ocean.";
- //   } else if(typeof color === 'red'){
+ //   } else if(color === 'red'){
   //      return "Red is the color of cherries";
    // } else {
      //   return "I do not know anything by that color " + color;
@@ -166,9 +166,9 @@ function calculateTotalObjectReturned(luckyNumber, amount) {
     }
 }
 
-console.log(calculateTotal(0, 100));
-console.log(calculateTotal(4, 100));
-console.log(calculateTotal(5, 100));
+console.log(calculateTotal(1, 100));
+console.log(calculateTotal(2, 100));
+console.log(calculateTotal(3, 100));
 
 /**
  * TODO:
