@@ -187,8 +187,8 @@ if (isNaN(totalBill) || totalBill === null || totalBill <= 0) {
     alert("You didn't enter a valid amount. Using 100 for default.");
     totalBill = 100;
 }
-let totalAfterRandomDiscount = calculateTotal(luckyNumber, Number(totalBill));
-alert(`Your lucky number ${luckyNumber} gave you a discount! Your new price is ${totalAfterRandomDiscount.toFixed(2)}, congrats!`);
+let totalRandomDiscount = calculateTotal(luckyNumber, Number(totalBill));
+alert(`Your lucky number ${luckyNumber} gave you a discount! Your new price is ${totalRandomDiscount.toFixed(2)}, congrats!`);
 
 console.log(calculateTotalObjectReturned(luckyNumber, 55));
 
