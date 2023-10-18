@@ -214,11 +214,10 @@ console.log(calculateTotalObjectReturned(luckyNumber, 55));
 let confirmResponse = confirm("Please enter a number.");
 
 if (confirmResponse) {
-    let aNumber = prompt("What is the number you wish to enter?", "22");
+    let aNumber = prompt("What is the number you wish to enter?", "100");
     if (!isNaN(aNumber) && aNumber != null && aNumber != '') {
         alert(`The number isEven(${aNumber}) returned ${isEven(aNumber)}`);
         alert(`The number addOneHundred(${aNumber}) returned ${addOneHundred(aNumber)}`);
-        alert(`The number positiveOrNegative(${aNumber}) returned ${positiveOrNegative(aNumber)}`);
     } else {
         alert("You have not entered a valid number.");
     }
@@ -228,12 +227,4 @@ function isEven(num) {
 }
 function addOneHundred(num) {
     return Number(num) + 100;
-}
-const askForConfirm = () => {
-    return confirm(`Would you like to add a number?`);
-}
-const evaluateNumber = (aNumber) => {
-    alert(`The number is Even (${ aNumber}) returned ${isEven(aNumber)}`);
-    alert(`The number addOneHundred(${ aNumber}) returned ${addOneHundred(aNumber)}`);
-    alert(`The number positiveOrNegative(${ aNumber}) returned ${positiveOrNegative(aNumber)}`);
 }
