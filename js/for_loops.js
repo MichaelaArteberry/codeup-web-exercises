@@ -16,6 +16,7 @@ for(let i = 0; i < 11; i++) {
         console.log(randomNumber + " is odd");
     }
 }
+
 // Third Exercise
 for(i = 0; 1 < 10; i++) {
     let message = ""
@@ -23,7 +24,6 @@ for(i = 0; 1 < 10; i++) {
 message += i;
     } console.log(message)
 }
-
 
 // Last Exercise
 function decreaseByFive()  {
