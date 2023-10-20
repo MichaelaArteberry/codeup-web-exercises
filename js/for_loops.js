@@ -17,14 +17,13 @@ for(let i = 0; i < 11; i++) {
     }
 }
 // Third Exercise
-function numberPyramid(totalNumberOfRows) {
-    let output = '';
-    for (let i = 1; i < totalNumberOfRows; i++) {
-        output += '\n'.padStart(i + 1, i);
-    }
-    console.log(output);
+for(i = 0; 1 < 10; i++) {
+    let message = ""
+    for (let j = 0; j < i; j++) {
+message += i;
+    } console.log(message)
 }
-numberPyramid(10);
+
 
 // Last Exercise
 function decreaseByFive()  {
