@@ -23,9 +23,10 @@
      * accessing each element's index.
      */
 
-    names.forEach(function (names, index) {
-        console.log(`${index}: ${names}`);
-    });
+        console.log(name[0]);
+        console.log(name[1]);
+        console.log(name[2]);
+        console.log(name[3]);
 
     /**
      * TODO:
@@ -74,7 +75,7 @@ first();
 
     // Third Function
     function third(arr){
-        console.log(names[3]);
+        console.log(names.length - 1);
     }
     third();
 })();
