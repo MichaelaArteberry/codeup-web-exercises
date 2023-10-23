@@ -29,8 +29,7 @@
     console.log(planetsStringCopy)
 
 
-    let planetList = ["<ul>",planetsArray.map(function(str){
-        return '<li>'+str+'</li>'}).join('\n'),"</ul>"].join("\n");
+    let planetList = "<ul><li>${planetsArray.join("</li><li></li>")}</li></ul>";
     console.log(planetList);
 
 })();
