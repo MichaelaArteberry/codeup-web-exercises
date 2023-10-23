@@ -1,8 +1,8 @@
 (function(){
     "use strict";
 
-    var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    var planetsArray;
+    let planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
+    // let planetsArray;
 
     /**
      * TODO:
@@ -11,7 +11,8 @@
      * console.log planetsArray to check your work
      */
 
-    // console.log(planetsArray);
+    let planetsArray = planetsString.split("|");
+    console.log(planetsArray);
 
     /**
      * TODO:
@@ -23,5 +24,13 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
+
+    let planetsStringCopy = planetsArray.join("<br>")
+    console.log(planetsStringCopy)
+
+
+    let planetList = ["<ul>",planetsArray.map(function(str){
+        return '<li>'+str+'</li>'}).join('\n'),"</ul>"].join("\n");
+    console.log(planetList);
 
 })();
