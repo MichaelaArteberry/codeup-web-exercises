@@ -111,7 +111,7 @@
 
     books.forEach((book, num) =>{
         let bookAuthor = book.author.firstName + " " + book.author.lastName
-        console.log("Book # ${num +1} Title: ${book.title} Author: ${bookAuthor}");
+        console.log(`Book # ${num +1} Title: ${book.title} Author: ${bookAuthor}`)
     })
 
     /**
