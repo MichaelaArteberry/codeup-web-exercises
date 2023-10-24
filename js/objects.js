@@ -30,7 +30,7 @@
      */
 
     person.sayHello = function (){
-        return "Hello from " + person.firstName + " " + person.lastName + "!"
+        return `Hello from ${this.firstName} ${this.lastName} !`
     }
     console.log(person.sayHello());
 
@@ -54,11 +54,12 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.forEach(shopper =>{
-        if (shopper.amount <=200) console.log(`${shopper.name} has a total amount that is less than $200 and does not qualify for the discount. The total amount due is $${(shopper.amount).toFixed(2)}.`)
+    shoppers.forEach(shopper => {
+        if (shopper.amount < 200)
+            console.log(`${shopper.name} has a total amount that is less than $200 and does not qualify for the discount. The total amount due is $${(shopper.amount).toFixed(2)}.`);
         else {
             let discount = (shopper.amount - (shopper.amount * .12)).toFixed(2)
-            console.log(`${shopper.name} has a total amount of $${shopper.amount} and qualifies for a 12% discount. The new total after discount is $${discount}.`)
+            console.log(`${shopper.name} has a total amount of $${shopper.amount} and qualifies for a 12% discount. The new total after discount is $${discount}.`);
         }
     })
 
@@ -110,7 +111,7 @@
 
     books.forEach((book, num) =>{
         let bookAuthor = book.author.firstName + " " + book.author.lastName
-        console.log(`Book # ${num +1} Title: ${book.title} Author: ${bookAuthor}`)
+        console.log("Book # ${num +1} Title: ${book.title} Author: ${bookAuthor}");
     })
 
     /**
