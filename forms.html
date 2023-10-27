@@ -13,18 +13,28 @@
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" placeholder="Enter Password"><br>
    </main>
+      <br>
         <section>
         <label for="bio">Bio</label>
         <textarea name="bio" id="bio" placeholder="Tell Us About Yourself!"></textarea> <br>
     </section>
+      <section>
+        <h3>How did you hear about us?</h3>
+        <input type="radio" id="billboard" name="ad" value="billboard"><label for="billboard">Billboard</label>
+        <input type="radio" id="radio-ad" name="ad" value="radio-ad"><label for="radio-ad">Radio-add</label>
+        <input type="radio" id="internet" name="ad" value="internet"><label for="internet">Internet</label>
+        <input type="other" id="other" name="ad" value="other"><label for="other">Other</label>
+      </section>
     <section>
+      <br>
       <label for="favbrowsers">What is your Favorite Web Browser</label>
        <select name="Favorite Web Browser" id="favbrowsers">
-          <option>Google Chrome</option>
-          <option>FireFox</option>
-          <option>Safari</option>
-          <option>Internet Explorer</option>
+          <option value="google">Google Chrome</option>
+          <option value="firefox">FireFox</option>
+          <option value="safari">Safari</option>
+          <option value="explorer">Internet Explorer</option>
        </select><br>
+      <br>
       <input type="submit">
     </section>
 </body>
