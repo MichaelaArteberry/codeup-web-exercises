@@ -1,3 +1,99 @@
+* {
+    font-family: 'Lora', serif;
+}
+
 h1 {
-    color: purple;
+    color: darkmagenta;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-style: italic;
+}
+h2 {
+    color: indigo;
+    text-decoration: underline;
+    text-align: center;
+}
+
+html {
+    background-image: url("../imgs/world-lights.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    background-color: rgba(189, 180, 191, .4);
+    min-height: 100dvh;
+    margin: 10dvh;
+}
+
+ul>li {
+    list-style: square;
+}
+
+table, th, td{
+    text-decoration: underline;
+    border: 2px solid;
+    border-color: deeppink;
+    align-content: center;
+    margin: auto;
+}
+
+tr {
+    padding: 4dvh;
+}
+
+td {
+    padding: 2dvh;
+}
+
+a {
+    transition: .5s;
+    background-color: black;
+}
+
+a:link, a:visited {
+    color: deeppink;
+}
+
+a:hover {
+    color: rebeccapurple;
+    font-size: 32px;
+}
+
+a:active {
+    color: deeppink;
+    background-color: black;
+}
+
+p {
+    text-align: center;
+    background-color: palevioletred;
+    background-position: center;
+    background-blend-mode: hue;
+}
+
+div {
+    text-align: center;
+}
+
+ul {
+    display: inline-block;
+    text-align: center;
+}
+
+ol {
+    display: inline-block;
+    text-align: center;
+}
+
+#myImage {
+    float: right;
+    border: 2px solid;
+    border-color: black;
+}
+#myPic {
+    border: 2px solid;
+    border-color: black;
 }
