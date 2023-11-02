@@ -31,3 +31,8 @@ nav a:hover {
     margin-bottom: auto;
     padding-right: 1em;
 }
+
+.center{
+    flex-grow: 1;
+    text-align: center;
+}
