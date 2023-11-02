@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    font-family: 'Lora', serif;
+    font-family: 'Nanum Myeongjo', serif;
 }
 body {
     margin: 0;
@@ -13,16 +15,31 @@ ul {
     margin: 0;
     display: flex;
 }
+
+.logo {
+    font-size: 1.5em;
+    padding: .2em 0 .2em 0;
+    font-weight: bold;
+    align-items: center;
+    margin-right: 2em;
+}
+
 nav a {
     text-decoration: none;
     color: darkmagenta;
-    font-family: "Times New Roman";
     display: inline-block;
     padding: 1em;
 }
 nav a:hover {
     color: hotpink;
     background: pink;
+}
+
+.left{
+    padding-left: 1em;
+}
+.right{
+    padding-right: 1em;
 }
 
 .searchBar {
