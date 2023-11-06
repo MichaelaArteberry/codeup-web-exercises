@@ -1,0 +1,13 @@
+* {
+box-sizing: border-box;
+}
+
+.header-img {
+    margin-left: 4em;
+    background-size: cover;
+}
+
+.jumbotron {
+    height: 346px;
+    background-size: cover;
+}
