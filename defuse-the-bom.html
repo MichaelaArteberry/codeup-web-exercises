@@ -16,12 +16,8 @@
         var detonationTimer = 5;
 
         // TODO: This function needs to be called once every second
-        const intervalId = setInterval(() => {
-            if (detonationTimer >= 0) {
-                updateTimer()
-            }
-            clearInterval(intervalID)
-        }, 1000);
+
+
 
         function updateTimer() {
             if (detonationTimer == 0) {
@@ -33,6 +29,8 @@
 
             detonationTimer--;
         }
+
+        setInterval(updateTimer, 1000)
 
         // TODO: When this function runs, it needs to
         // cancel the interval/timeout for updateTimer()
