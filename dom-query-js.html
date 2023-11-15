@@ -15,7 +15,7 @@
     <li data-dbid="5">Item 5</li>
 </ul>
 <h2 id="sub-header">Hello Again.</h2>
-<p class="sub-paragraph">
+<p class="sub-paragraph" id="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
     ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -32,7 +32,9 @@
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        mainHeader.innerHTML = "JavaScript is Cool";
+        mainHeader.addEventListener("click", () => {
+            mainHeader.innerHTML = "JavaScript is Cool"
+        })
 
         // TODO: Uncomment the next line and get the sub header element by id
 
@@ -40,7 +42,8 @@
 
         // TODO: Set the text color of subHeader to blue
 
-        subHeader.style.color = "blue";
+        subHeader.addEventListener("click", () => {
+            subHeader.style.color = "blue"});
 
         // TODO: Uncomment the next line and get all list items
 
@@ -56,15 +59,17 @@
 
         // TODO: Set text color of li with dbid = 1 to blue
 
-        listItems[0].style.color = "blue";
+        listItems[0].addEventListener("click", () => {
+            listItems[0].style.color = "blue"});
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
 
-        const subParagraphs = document.getElementsByClassName("sub-paragraph");
+        const subParagraph = document.getElementById("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
 
-            subParagraphs[0].innerText = "Mission Accomplished!";
+        subParagraph.addEventListener("click", () => {
+            subParagraph.innerText = "Mission Accomplished!"});
 
 </script>
 </body>
