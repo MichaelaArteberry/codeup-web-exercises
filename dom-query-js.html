@@ -24,52 +24,96 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<div>
+    <button id="btn-1">First Change</button>
+    <button id="btn-2">Second Change</button>
+    <button id="btn-3"> Third Change</button>
+    <button id="btn-4">Fourth Change</button>
+</div>
 <script>
-        "use strict";
-        // TODO: Uncomment next line and get the main header element by id
+    "use strict";
 
-        const mainHeader = document.getElementById("main-header");
+    const button1 = document.querySelector("#btn-1");
+    const button2 = document.querySelector("#btn-2");
+    const button3 = document.querySelector("#btn-3");
+    const button4 = document.querySelector("#btn-4");
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+    // TODO: Uncomment next line and get the main header element by id
 
-        mainHeader.addEventListener("click", () => {
-            mainHeader.innerHTML = "JavaScript is Cool"
-        })
+    const mainHeader = document.getElementById("main-header");
 
-        // TODO: Uncomment the next line and get the sub header element by id
+    // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        const subHeader = document.getElementById("sub-header");
+    button1.addEventListener("click", () => {
+        mainHeader.innerHTML = "JavaScript is Cool";
+    })
 
-        // TODO: Set the text color of subHeader to blue
+    // TODO: Uncomment the next line and get the sub header element by id
 
-        subHeader.addEventListener("click", () => {
-            subHeader.style.color = "blue"});
+    const subHeader = document.getElementById("sub-header");
 
-        // TODO: Uncomment the next line and get all list items
+    // TODO: Set the text color of subHeader to blue
 
-        const listItems = document.querySelectorAll("li");
+    button2.addEventListener("click", () => {
+        subHeader.style.color = "blue";
+    });
 
-        // TODO: Set text color on every other list item to grey
+    // TODO: Uncomment the next line and get all list items
 
+    const listItems = document.querySelectorAll("li");
+
+    // TODO: Set text color on every other list item to grey
+    button3.addEventListener("click", () => {
         listItems.forEach((item, index) => {
             if (index % 2 !== 0) {
                 item.style.color = 'grey';
             }
+        })
+    });
+
+    // TODO: Set text color of li with dbid = 1 to blue
+
+    listItems[0].addEventListener("click", () => {
+        listItems[0].style.color = "blue"
+    });
+
+    // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+
+    const subParagraph = document.getElementById("sub-paragraph");
+
+    // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+
+    button4.addEventListener("click", () => {
+        subParagraph.innerText = "Mission Accomplished!";
+    });
+
+
+    // start of mouse event exercise
+    document.getElementById('main-header').addEventListener('click', function () {
+        let changeBackground = this.getAttribute('aria-pressed') === 'true';
+        if (changeBackground) {
+            this.style.backgroundColor = '';
+        } else {
+            this.style.backgroundColor = 'blue';
+        }
+    });
+
+    let paragraphs = document.getElementsByClassName('sub-paragraph');
+    for(let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].addEventListener('dblclick', function () {
+            this.style.fontSize = '18px';
         });
+    }
 
-        // TODO: Set text color of li with dbid = 1 to blue
-
-        listItems[0].addEventListener("click", () => {
-            listItems[0].style.color = "blue"});
-
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-
-        const subParagraph = document.getElementById("sub-paragraph");
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-
-        subParagraph.addEventListener("click", () => {
-            subParagraph.innerText = "Mission Accomplished!"});
+    let liElements = document.getElementsByTagName('li');
+    for(let i = 0; i < liElements.length; i++) {
+        liElements[i].addEventListener('mouseover', function () {
+            this.style.color = 'red';
+        });
+        liElements[i].addEventListener('mouseout', function () {
+            this.style.color = 'black';
+        });
+    }
 
 </script>
 </body>
