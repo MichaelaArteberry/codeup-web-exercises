@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1 id="mainText">Konami Code</h1>
+<style>
+    h1 {
+        position: absolute;
+        top: 10px;
+        left: 19em;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    div {
+        text-align: center;
+    }
+</style>
+<script>
+    "use strict";
+    (() => {
+        let konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
+        let enteredKeys = [];
+        document.addEventListener("keydown", event => {
+            enteredKeys.push(event.key);
+            if (enteredKeys.length > konamiCode.length) {
+                enteredKeys.shift();
+            }
+            if (konamiCode.every((v, k) => v === enteredKeys[k])) {
+                document.getElementById("mainText").innerText = "!!!CHEATER!!!"
+                document.body.style.backgroundColor = "red";
+                document.body.style.color = "yellow";
+                document.body.style.fontWeight = "bolder"
+                let div = document.createElement('div'); // create a new div element
+                div.innerHTML = '<iframe allow="fullscreen" height="270" src="https://giphy.com/embed/bFVPhySU5MCCYjQz6A/video" width="480"></iframe>';
+                document.body.appendChild(div);
+                let video = document.createElement('video');
+                video.src = 'imgs/flame-video.mp4';
+                video.type = 'video/mp4';
+                video.autoplay = true;
+                video.muted = true;
+                video.loop = true;
+                document.body.appendChild(video);
+                enteredKeys = [];
+            }
+        });
+        document.addEventListener("keyup", event => console.log(event.key));
+    })();
+</script>
+</body>
+</html>
