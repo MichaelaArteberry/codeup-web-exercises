@@ -1,0 +1,29 @@
+* {
+    font-family: 'Lora', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Passion One', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Vollkorn', serif;
+}
+body {
+    background-color: #2B4570;
+}
+
+nav {
+    background-color: #2B4570;
+    text-align: center;
+}
+.nav-link {
+    color: #F6AE2D;
+}
+
+h1 {
+    text-align: center;
+    color: #EA2B1F;
+    background-color: #8D99AE;
+    font-weight: bold;
+}
+
+table {
+    text-align: center;
+}
