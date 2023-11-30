@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Exercise</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="css/mapbox_maps_api.css">
+</head>
+<body>
+<header>
+    <h1>Favorite Restaurants in Goldsboro.</h1>
+</header>
+<label for="zoom-level">Zoom Level:</label>
+<select id="zoom-level">
+    <option value="5">5</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+</select>
+<div id='map'></div>
+<script src="keys.js"></script>
+<script src="js/mapbox-geocoder-util.js"></script>
+<script>
+    //this is the map
+    mapboxgl.accessToken = MB_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        center: [-77.9928, 35.3849], // starting position [lng, lat]
+        zoom: 11, // starting zoom
+    });
+
+    //Adds the zoom control to the map
+    map.addControl(new mapboxgl.NavigationControl());
+
+    // Places the original location and marker
+    geocode("808 N Berkley Blvd Unit J Goldsboro North Carolina 27534", MB_KEY).then(coords => {
+        const marker = new mapboxgl.Marker()
+            .setLngLat(coords)
+            .addTo(map);
+
+        const mezcalitoPopup = new mapboxgl.Popup()
+            .setHTML("<p>Mezcalito!</p>");
+
+        marker.setPopup(mezcalitoPopup);
+    });
+
+    // Array of objects with restaurants
+    const restaurant = [{
+        name: "Chick-fil-a",
+        location: "1201 N Berkley Blvd Goldsboro North Carolina 27534"
+    },
+        {
+            name: "Texas Road House",
+            location: "600 N Berkley Blvd Goldsboro North Carolina 27534"
+        }];
+    // Function below to set the other two locations and add makers to them
+    resturaunt.forEach(rest => {
+        geocode(rest.location, MB_KEY).then(coords => {
+            const marker = new mapboxgl.Marker()
+                .setLngLat(coords)
+                .addTo(map);
+            const restaurantPopup = new mapboxgl.Popup()
+                .setHTML(`<p>${rest.name}</p>`);
+            marker.setPopup(restaurantPopup);
+        });
+    });
+    // Event Listener for the select zoom option
+    document.getElementById('zoom-level').addEventListener('change', function(event){
+        const zoomLevel = parseFloat(event.target.value);
+        map.setZoom(zoomLevel);
+    });
+</script>
+</body>
+</html>
