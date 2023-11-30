@@ -1,5 +1,10 @@
 nav {
     background-color: #744FC6;
+    font-family: 'Lora', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Passion One', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Vollkorn', serif;
 }
 
 a:visited {
@@ -9,18 +14,35 @@ a:visited {
 h1 {
     text-align: center;
     background-color: black;
+    font-family: 'Grechen Fuemen', cursive;
+    font-family: 'Lora', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Passion One', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Vollkorn', serif;
+    font-family: 'Vujahday Script', cursive;
 }
 
 .fancy-h1 {
     color: #00A1E4;
+    font-family: 'Grechen Fuemen', cursive;
+    font-family: 'Lora', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Passion One', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Vollkorn', serif;
+    font-family: 'Vujahday Script', cursive;
 }
 
 h2 {
     text-align: center;
-}
-
-main {
-
+    font-family: 'Grechen Fuemen', cursive;
+    font-family: 'Lora', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Passion One', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Vollkorn', serif;
+    font-family: 'Vujahday Script', cursive;
 }
 
 img {
@@ -29,4 +51,10 @@ img {
 
 #posts {
     margin: auto;
+    font-family: 'Gluten', cursive;
+    font-family: 'Lora', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Passion One', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Vollkorn', serif;
 }
