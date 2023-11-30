@@ -1,0 +1,32 @@
+nav {
+    background-color: #744FC6;
+}
+
+a:visited {
+    color: hotpink;
+}
+
+h1 {
+    text-align: center;
+    background-color: black;
+}
+
+.fancy-h1 {
+    color: #00A1E4;
+}
+
+h2 {
+    text-align: center;
+}
+
+main {
+
+}
+
+img {
+    margin: 2em;
+}
+
+#posts {
+    margin: auto;
+}
