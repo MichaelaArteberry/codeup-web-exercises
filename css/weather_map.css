@@ -1,0 +1,26 @@
+body {
+
+}
+
+#map {
+    width: 97%;
+    height: 50vh;
+    margin: 2em;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.forecast-card {
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+}
