@@ -1,17 +1,27 @@
 body {
+    font-family: 'Playfair Display', serif;
+    background-color: #938BA1;
 
 }
 
 #map {
     width: 97%;
     height: 50vh;
-    margin: 2em;
+    margin: 1.5em;
     align-items: center;
 }
 h1 {
     text-align: center;
     margin: 0;
     padding: 0;
+    text-decoration: underline;
+}
+
+.parent-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .forecast-card {
@@ -22,5 +32,16 @@ h1 {
     padding: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 15px #5C164E;
+    background-color: #fff;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+.search-bar {
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }

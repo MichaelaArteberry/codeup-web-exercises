@@ -16,6 +16,8 @@ document.getElementById('zoom-level').addEventListener('change', function (event
     const zoomLevel = parseFloat(event.target.value);
     map.setZoom(zoomLevel);
 });
+
+//Pulling the weather data from the API
 fetch(`https://api.openweathermap.org/data/2.5/weather?` +
     `lat=29.426825118534886&lon=-98.48948239256946` +
     `&appid=${WeatherMap_KEY}&units=imperial`)
@@ -27,7 +29,7 @@ let marker = new mapboxgl.Marker({
 }).setLngLat([-77.9928, 35.3849])
     .addTo(map);
 
-// Create the forecast cards for the original location
+// Create the forecast cards for the original location, calling the createForecastCards function
 createForecastCards(marker.getLngLat());
 
 // When the marker is dragged, update the weather data
@@ -51,9 +53,10 @@ document.getElementById('searchButton').addEventListener('click', function () {
             center: result,
             essential: true
         });
-        new mapboxgl.Marker()
+        let marker = new mapboxgl.Marker({draggable: true})
             .setLngLat(result)
             .addTo(map);
+
 //Catching the error if the user inputs an invalid address
     }).catch(function (error) {
         console.error(error);
@@ -64,6 +67,8 @@ document.getElementById('searchButton').addEventListener('click', function () {
         marker.remove();
         }
     });
+
+// NEED TO ASK FOR HELP TO GET THE NEW SEARCHED MARKER THAT GETS DRAGGED TO UPDATE THE ADDRESS
 
 // Create cards for the forecast based on the location of the marker
 function createForecastCards(lngLat) {
