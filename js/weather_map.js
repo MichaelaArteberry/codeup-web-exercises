@@ -43,7 +43,7 @@ marker.on('dragend', function () {
             createForecastCards(lngLat);
         })
         .catch(error => console.error('Error:', error));
-    });
+});
 
 // For the user to search an address and place a marker
 document.getElementById('searchButton').addEventListener('click', function () {
@@ -53,22 +53,14 @@ document.getElementById('searchButton').addEventListener('click', function () {
             center: result,
             essential: true
         });
-        let marker = new mapboxgl.Marker({draggable: true})
-            .setLngLat(result)
-            .addTo(map);
+        marker.setLngLat(result);
 
 //Catching the error if the user inputs an invalid address
     }).catch(function (error) {
         console.error(error);
         alert('Unable to obtain address. Please try again.');
     });
-//Clears out original marker to replace with new one
-    if (marker) {
-        marker.remove();
-        }
-    });
-
-// NEED TO ASK FOR HELP TO GET THE NEW SEARCHED MARKER THAT GETS DRAGGED TO UPDATE THE ADDRESS
+});
 
 // Create cards for the forecast based on the location of the marker
 function createForecastCards(lngLat) {
@@ -77,7 +69,7 @@ function createForecastCards(lngLat) {
         .then(forecast => {
 // Create HTML structure for the forecast
             let forecastHTML = '';
-            for(let i = 0; i < forecast.list.length; i += 8) {
+            for (let i = 0; i < forecast.list.length; i += 8) {
                 const day = forecast.list[i];
                 const date = new Date(day.dt * 1000).toDateString();
                 const addIcon = day.weather[0].icon;
@@ -93,7 +85,7 @@ function createForecastCards(lngLat) {
                 `;
             }
 // Add the forecast cards to the page
-document.getElementById('weatherInfoCard').innerHTML = forecastHTML;
+            document.getElementById('weatherInfoCard').innerHTML = forecastHTML;
         });
-    }
+}
 
