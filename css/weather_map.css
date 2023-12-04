@@ -1,7 +1,10 @@
 body {
     font-family: 'Playfair Display', serif;
-    background-color: #938BA1;
+    background-color: #86BBD8;
+}
 
+.navbar {
+    background-color: #FFF;
 }
 
 #map {
@@ -30,18 +33,18 @@ h1 {
     flex-direction: column;
     margin: 1em;
     padding: 1em;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 5px;
-    box-shadow: 0 0 15px #5C164E;
+    box-shadow: 0 0 15px #336699;
     background-color: #fff;
-}
-
-h3 {
-    text-decoration: underline;
 }
 
 .search-bar {
     margin: auto;
     display: flex;
     justify-content: center;
+}
+
+#zoom-label {
+    margin: 1em;
 }

@@ -17,8 +17,25 @@
     <script src="js/keys.js"></script> <!--Link to my keys file-->
 </head>
 <body>
+<!--Here is the Navbar-->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Weather</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">Monthly Forecast</a>
+                <a class="nav-link" href="#">Radar</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
 <header>
-    <h1>Weather Map Project</h1>
+    <h1>Five-Day Forecast</h1>
 </header>
 
 <!--Div for the weather information shown as a card-->
@@ -26,6 +43,7 @@
     <div id="weatherInfoCard">
         <h2 >Weather Information</h2>
         <p id="weatherInfo"></p>
+
     </div>
 </div>
 
@@ -42,7 +60,7 @@
 </div>
 <!--Dive that contains the zoom level-->
 <div>
-<label for="zoom-level">Zoom Level:</label>
+<label for="zoom-level" id="zoom-label">Zoom Level:</label>
 <select id="zoom-level">
     <option value="5">5</option>
     <option value="15">15</option>
@@ -53,5 +71,6 @@
 <!--Below are my javascript files-->
 <script src="js/mapbox-geocoder-util.js"></script>
 <script src="js/weather_map.js"></script>
+<script src="https://kit.fontawesome.com/7c24c3b5c0.js" crossorigin="anonymous"></script>
 </body>
 </html>

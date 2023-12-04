@@ -80,9 +80,12 @@ function createForecastCards(lngLat) {
             for(let i = 0; i < forecast.list.length; i += 8) {
                 const day = forecast.list[i];
                 const date = new Date(day.dt * 1000).toDateString();
+                const addIcon = day.weather[0].icon;
+                const iconUrl = `https://openweathermap.org/img/wn/${addIcon}@2x.png`; // Pulled this link from the open weather map api
                 forecastHTML += `
                     <div class="forecast-card">
                         <h3>${date}</h3>
+                        <img src=${iconUrl} alt=${day.weather[0].description} />
                         <p>Temperature: ${day.main.temp}°F</p>
                         <p>Humidity: ${day.main.humidity}%</p>
                         <p>${day.weather[0].description}</p>
