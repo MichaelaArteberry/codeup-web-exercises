@@ -8,28 +8,39 @@
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>  <!--Link to mapbox-->
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital@0;1&family=Gluten:wght@100;200;300;400;500;600;700;800;900&family=Grechen+Fuemen&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Myeongjo:wght@400;700;800&family=Passion+One:wght@400;700;900&family=Playfair+Display:ital@0;1&family=Quicksand:wght@300;400;500;600;700&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Vujahday+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital@0;1&family=Gluten:wght@100;200;300;400;500;600;700;800;900&family=Grechen+Fuemen&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nanum+Myeongjo:wght@400;700;800&family=Passion+One:wght@400;700;900&family=Playfair+Display:ital@0;1&family=Quicksand:wght@300;400;500;600;700&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Vujahday+Script&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="css/weather_map.css"> <!--Link to my css file-->
     <script src="js/keys.js"></script> <!--Link to my keys file-->
 </head>
 <body>
+
 <!--Here is the Navbar-->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Weather App</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" href="#">Home</a>
-                <a class="nav-link" href="#">Monthly Forecast</a>
-                <a class="nav-link" href="#">Radar</a>
-            </div>
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-globe"></i> MIC Inc.</a>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Monthly Forecast</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Radar</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+        Mickey's International Climate
+      </span>
         </div>
     </div>
 </nav>
@@ -41,34 +52,37 @@
 <!--Div for the weather information shown as a card-->
 <div class="parent-container">
     <div id="weatherInfoCard">
-        <h2 >Weather Information</h2>
+        <h2>Weather Information</h2>
         <p id="weatherInfo"></p>
 
     </div>
 </div>
 
+<hr>
+
 <!--Div for the search bar-->
-<div class="search-bar">
-    <label for="search">Search for a location:</label>
-    <input  type="text" id="search" placeholder="Enter a location">
-    <button id="searchButton">Search</button>
+<div class="search-bar input-group">
+    <label for="search" class="form-control w-15 search-label"> Search for a location: </label>
+    <input type="text" class="form-control w-75" id="search" placeholder="Enter a location">
+    <button class="btn btn-secondary btn-lg" id="searchButton">Search</button>
 </div>
 
 <!--Div that contains the map-->
 <div id='map'>
 
 </div>
+
 <!--Dive that contains the zoom level-->
 <div>
-<label for="zoom-level" id="zoom-label">Zoom Level:</label>
-<select id="zoom-level">
-    <option value="5">5</option>
-    <option value="15">15</option>
-    <option value="20">20</option>
-</select>
+    <label for="zoom-level" id="zoom-label">Zoom Level:</label>
+    <select id="zoom-level">
+        <option value="5">5</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+    </select>
 </div>
 
-<!--Below are my javascript files-->
+<!--Below are my javascript files and font awesome kit-->
 <script src="js/mapbox-geocoder-util.js"></script>
 <script src="js/weather_map.js"></script>
 <script src="https://kit.fontawesome.com/7c24c3b5c0.js" crossorigin="anonymous"></script>

@@ -7,6 +7,10 @@ body {
     background-color: #FFF;
 }
 
+i {
+    color: #1561e5;
+}
+
 #map {
     width: 97%;
     height: 50vh;
@@ -15,9 +19,14 @@ body {
 }
 h1 {
     text-align: center;
-    margin: 0;
+    margin: 1em;
     padding: 0;
     text-decoration: underline;
+    color: #083D77;
+}
+
+h3 {
+    color: #083D77;
 }
 
 .parent-container {
@@ -43,6 +52,11 @@ h1 {
     margin: auto;
     display: flex;
     justify-content: center;
+}
+
+.search-label {
+     background-color: #083D77;
+    color: #fff;
 }
 
 #zoom-label {

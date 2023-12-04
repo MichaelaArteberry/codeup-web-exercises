@@ -78,9 +78,9 @@ function createForecastCards(lngLat) {
                     <div class="forecast-card">
                         <h3>${date}</h3>
                         <img src=${iconUrl} alt=${day.weather[0].description} />
-                        <p>Temperature: ${day.main.temp}°F</p>
-                        <p>Humidity: ${day.main.humidity}%</p>
-                        <p>${day.weather[0].description}</p>
+                        <p><i class="fa-solid fa-temperature-high"></i> Temperature: ${day.main.temp}°F</p>
+                        <p><i class="fa-solid fa-water"></i> Humidity: ${day.main.humidity}%</p>
+                        <p><i class="fa-solid fa-circle-info"></i>${day.weather[0].description}</p>
                     </div>
                 `;
             }
